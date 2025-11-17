@@ -5,183 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapagino - Web Corporativa</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-    <style>
-      /* 1. Estilos Globales y Reset */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      /* 2. Barra de Navegación */
-      .navbar {
-        background-color: #007bff; /* Azul primario */
-        color: white;
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar-brand,
-      .nav-link-home {
-        font-size: 1.5em;
-        font-weight: bold;
-        cursor: pointer;
-        color: white;
-      }
-
-      .navbar-links a {
-        color: white;
-        padding: 5px 10px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-        cursor: pointer;
-      }
-
-      .navbar-links a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-color: white;
-      }
-
-      /* 3. Cabecera (Header) con el logo */
-      .header {
-        background-color: #f0da32;
-        padding: 40px 20px;
-        text-align: center;
-        border-bottom: 1px solid #ddd;
-      }
-
-      .header .logo {
-        max-width: 250px; /* Tamaño del logo. AJUSTAR según sea necesario. */
-        height: auto;
-        margin: 0 auto;
-        display: block;
-      }
-
-      /* 4. Contenido Principal Común */
-      main {
-        flex-grow: 1;
-        padding: 50px 20px;
-      }
-
-      .content-section {
-        background-color: #f8f7db;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      }
-
-      /* Estilos En Construcción */
-      .construction-box h2 {
-        color: #333;
-        margin-bottom: 20px;
-        font-size: 2em;
-        text-align: center;
-      }
-
-      .construction-image {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        background-color: #eee;
-        margin-bottom: 20px;
-        border-radius: 4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-style: italic;
-        color: #666;
-        overflow: hidden;
-      }
-
-      .construction-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      /* Estilos Términos */
-      .terms-content h2 {
-        color: #333;
-        margin-bottom: 20px;
-      }
-
-      .terms-content h3 {
-        margin-top: 30px;
-        color: #333;
-      }
-
-      /* Botón de Regreso */
-      .back-button {
-        background-color: #6c757d;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1em;
-        margin-top: 20px;
-        transition: background-color 0.3s;
-      }
-
-      .back-button:hover {
-        background-color: #5a6268;
-      }
-
-      /* Clase de utilidad para el routing (ocultar/mostrar) */
-      .hidden {
-        display: none;
-      }
-
-      /* 5. Pie de Página (Footer) */
-      .footer {
-        background-color: #333;
-        color: white;
-        padding: 20px;
-        text-align: center;
-      }
-
-      .social-links a {
-        color: white;
-        margin: 0 15px;
-        font-size: 1.8em;
-        transition: color 0.3s;
-      }
-
-      .social-links a:hover {
-        color: #007bff;
-      }
-
-      .center {
-        text-align: center;
-      }
-
-      .footer p {
-        margin-top: 10px;
-        font-size: 0.9em;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-brand nav-link-home">
+        <a href="index.html">Mapagino</a>
+      </div>
+      <div class="navbar-links">
+        <a href="privacy-gdpr.html">Política de Privacidad</a>
+        <a href="terms.html">Términos App "Mapuquina"</a>
+      </div>
+    </nav>
+
     <header class="header">
       <img
         src="assets/logotipo.png"
@@ -193,150 +32,14 @@
     <main>
       <div id="main-content" class="content-section">
         <div class="construction-box">
-          <h2>¡Estamos trabajando duro!</h2>
-          <p>
-            Gracias por tu interés en Mapagino. Nuestra web corporativa está
-            actualmente en construcción, pero puedes ver mientras nuestros
-            <a
-              href="#"
-              onclick="showSection('terms'); return false;"
-              style="color: #007bff; font-weight: bold"
-              >Términos y Condiciones</a
-            >
-            para nuestra aplicación <strong>Mapuquina</strong>.
+          <h2>¡Gracias por tu interés!</h2>
+          <p class="center">
+            Nuestra web corporativa está actualmente en construcción.
           </p>
         </div>
       </div>
 
-      <div id="terms-content" class="content-section hidden">
-        <div class="terms-content">
-          <h2>Términos y Condiciones de Uso (Mapuquina)</h2>
-          <p>
-            Desarrollador: Mapagino Fecha de Vigencia: 14 de Noviembre de 2025
-            Jurisdicción Aplicable: Perú
-          </p>
-
-          <h3>1. Aceptación de los Términos</h3>
-          <p>
-            Al descargar, instalar o utilizar la aplicación Mapuquina, usted (el
-            "Usuario") acepta estar sujeto a estos Términos y Condiciones. El
-            uso continuado de la aplicación implica la aceptación de cualquier
-            modificación futura de estos Términos. Si usted desinstala y luego
-            reinstala la aplicación, deberá aceptar la versión vigente de estos
-            Términos para continuar.
-          </p>
-
-          <h3>2. Privacidad y Almacenamiento de Datos (Compromiso Central)</h3>
-          <p>
-            Exclusivamente Local: Mapuquina está diseñada para la gestión
-            financiera personal con almacenamiento exclusivamente en el
-            dispositivo del Usuario. Los datos de cuentas, transacciones y
-            proyecciones nunca son recopilados, almacenados ni transmitidos a
-            servidores externos por parte de Mapagino.
-          </p>
-
-          <p>
-            Responsabilidad de Datos Sensibles: Mapuquina no solicita ni
-            requiere información de identificación personal ni datos sensibles
-            (como números de tarjeta o claves bancarias). El Usuario es
-            responsable de no ingresar dicha información en los campos libres de
-            la aplicación.
-          </p>
-
-          <p>
-            Uso de Terceros y Analíticas: Mapuquina es gratuita e incluye
-            publicidad mediante un banner permanente. Mapagino utiliza servicios
-            de publicidad de terceros (como Google AdMob) que pueden recopilar
-            datos de uso y analíticos (ej. identificadores de publicidad) bajo
-            sus propias políticas de privacidad. Mapagino declina toda
-            responsabilidad por las prácticas de recopilación de datos de estos
-            terceros.
-          </p>
-
-          <h3>
-            3. Descargo de Responsabilidad sobre Precisión y Asesoramiento
-          </h3>
-          <p>
-            Herramienta de Simulación: Mapuquina es una herramienta de
-            organización y simulación financiera personal. La información,
-            simulaciones y proyecciones (incluyendo planes de pago) no
-            constituyen asesoramiento, consejo, o recomendación financiera o de
-            inversión.
-          </p>
-
-          <p>
-            Ausencia de Precisión Garantizada: Los cálculos y resultados son
-            aproximados y se basan en la información ingresada por el Usuario,
-            sin garantizar una precisión total.
-          </p>
-
-          <p>
-            Descargo de Responsabilidad por Errores: Se incluye un descargo de
-            responsabilidad por posibles errores de software (bugs). El Usuario
-            asume la responsabilidad total de verificar los montos reales con
-            sus entidades financieras. Mapagino no será responsable de pérdidas
-            o daños derivados del uso de la aplicación.
-          </p>
-
-          <h3>4. Pérdida de Datos y Copias de Seguridad</h3>
-          <p>
-            Responsabilidad del Usuario: Debido al almacenamiento local de los
-            datos, el Usuario es el único responsable de la seguridad de su
-            dispositivo. Aunque Mapagino pueda implementar funcionalidades de
-            copia de seguridad en el futuro, la responsabilidad de generar y
-            asegurar los respaldos de los datos recae exclusivamente en el
-            Usuario. Mapagino no se hace responsable por la pérdida permanente
-            de datos causada por daño del dispositivo o desinstalación.
-          </p>
-
-          <h3>5. Monetización y Modificaciones</h3>
-          <p>
-            Servicio Gratuito con Publicidad: La aplicación es gratuita y
-            muestra publicidad en un banner permanente.
-          </p>
-
-          <p>
-            Modificaciones de los Términos: Mapagino se reserva el derecho de
-            modificar estos Términos y Condiciones. Se informará a los Usuarios
-            mediante una notificación en la aplicación (si está disponible) o
-            mediante la publicación de las actualizaciones en las redes sociales
-            y el sitio web de Mapagino.
-          </p>
-
-          <h3>6. Contenido, Propiedad Intelectual y Feedback</h3>
-          <p>
-            Propiedad Intelectual: Todo el código, gráficos, diseño y las marcas
-            Mapuquina / Mapagino son propiedad de Mapagino.
-          </p>
-
-          <p>
-            Feedback y Sugerencias: Cualquier sugerencia o feedback enviado por
-            el Usuario será considerado como una ayuda sin compensación, y
-            Mapagino conservará el derecho de usar esas ideas libremente.
-          </p>
-
-          <h3>7. Descargo de Responsabilidad sobre Accesibilidad</h3>
-          <p>
-            Si bien Mapagino se esfuerza por cumplir con los estándares de
-            accesibilidad en el diseño de la aplicación, el desarrollador no
-            garantiza que la aplicación cumpla con todos los estándares
-            internacionales de accesibilidad. Mapagino no será responsable por
-            demandas relacionadas con el incumplimiento de ciertas normativas de
-            accesibilidad.
-          </p>
-
-          <h3>8. Ley Aplicable y Jurisdicción</h3>
-          <p>
-            Estos Términos y Condiciones se rigen y serán interpretados de
-            acuerdo con las leyes de la República del Perú. Cualquier disputa
-            que surja en relación con estos términos estará sujeta a la
-            jurisdicción exclusiva de los tribunales de la ciudad de Lima, Perú.
-          </p>
-          <button class="back-button" onclick="showSection('main')">
-            <i class="fas fa-home"></i> Volver al Inicio
-          </button>
-        </div>
-      </div>
+      <div id="terms-content" class="content-section hidden"></div>
     </main>
 
     <footer class="footer">
@@ -356,33 +59,9 @@
           <i class="fab fa-instagram"></i>
         </a>
       </div>
-      <p>&copy; 2024 Mapagino. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Mapagino. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-      /**
-       * Función para alternar la visibilidad de las secciones de contenido.
-       * @param {string} sectionId - El ID de la sección que se desea mostrar ('main' o 'terms').
-       */
-      function showSection(sectionId) {
-        const mainContent = document.getElementById("main-content");
-        const termsContent = document.getElementById("terms-content");
-
-        if (sectionId === "main") {
-          // Muestra la sección de Inicio (En Construcción)
-          mainContent.classList.remove("hidden");
-          // Oculta la sección de Términos
-          termsContent.classList.add("hidden");
-        } else if (sectionId === "terms") {
-          // Oculta la sección de Inicio (En Construcción)
-          mainContent.classList.add("hidden");
-          // Muestra la sección de Términos
-          termsContent.classList.remove("hidden");
-        }
-
-        // Desplazar al inicio de la página
-        window.scrollTo(0, 0);
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
