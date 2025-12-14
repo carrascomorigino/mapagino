@@ -74,3 +74,18 @@ window.addEventListener("popstate", (event) => {
 // C. Sobreescribir los onclicks para usar la nueva función
 // IMPORTANTE: Asegúrate de que todos tus enlaces llamen a showSection(id)
 // Por ejemplo: onclick="showSection('privacy')"
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.querySelector(".menu-toggle");
+  const navLinks = document.getElementById("navbarLinks");
+
+  toggleButton.addEventListener("click", () => {
+    // Alterna la clase 'active' para mostrar/ocultar los enlaces
+    navLinks.classList.toggle("active");
+
+    // Alterna el atributo aria-expanded para accesibilidad
+    const isExpanded =
+      toggleButton.getAttribute("aria-expanded") === "true" || false;
+    toggleButton.setAttribute("aria-expanded", !isExpanded);
+  });
+});

@@ -19,7 +19,16 @@
       <div class="navbar-brand nav-link-home">
         <a href="index.html">Mapagino</a>
       </div>
-      <div class="navbar-links">
+
+      <button
+        class="menu-toggle"
+        aria-label="Mostrar menú"
+        aria-expanded="false"
+      >
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+
+      <div class="navbar-links" id="navbarLinks">
         <a href="privacy.html">Política de Privacidad</a>
         <a href="terms.html">Términos App "Mapuquina"</a>
       </div>
@@ -35,12 +44,49 @@
 
     <main>
       <div id="main-content" class="content-section">
-        <div class="construction-box">
-          <h2>¡Gracias por tu interés!</h2>
-          <p class="center">
-            Nuestra web corporativa está actualmente en construcción.
-          </p>
-        </div>
+        <h2>Nuestro Portafolio de Aplicaciones</h2>
+        <p>
+          En Mapagino, creamos herramientas digitales intuitivas para ayudarte a
+          gestionar tus finanzas personales y profesionales.
+        </p>
+
+        <section class="app-card mapuquina-highlight">
+          <div class="app-header">
+            <img
+              src="assets/icono_mapuquina.png"
+              alt="Icono de la App Mapuquina"
+              class="app-icon"
+            />
+            <h3>Mapuquina</h3>
+          </div>
+          <div class="app-details">
+            <p>
+              <b>Mapuquina</b> es nuestra herramienta principal para la gestión
+              de finanzas personales. Te permite registrar cuentas formales e
+              informales, transacciones, y ofrece una visión clara de tu
+              economía a través de gráficos y proyecciones de ahorro. No
+              requiere vincular tu dinero real.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-chart-line"></i> Proyecciones de Ahorro y
+                Rendimiento.
+              </li>
+              <li>
+                <i class="fas fa-hand-holding-usd"></i> Simulador de Préstamos y
+                Planes de Deuda.
+              </li>
+              <li>
+                <i class="fas fa-tags"></i> Organización de movimientos por
+                categorías.
+              </li>
+              <li>
+                <i class="fas fa-shield-alt"></i> Copia de respaldo en la nube
+                con Google Drive.
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
 
       <div id="terms-content" class="content-section hidden"></div>
