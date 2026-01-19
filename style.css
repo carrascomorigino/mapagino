@@ -12,7 +12,15 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+}
+
+ol > li {
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+ol > li::marker {
+  font-weight: bold;
 }
 
 /* 2. Barra de Navegación */
