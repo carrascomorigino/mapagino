@@ -1,5 +1,7 @@
 google.com, pub-4388053759324797, DIRECT, f08c47fec0942fa0
 
+ownerdomain=mapagino.com
+
 smartadserver.com, 4456, RESELLER
 indexexchange.com, 214183, RESELLER, 50b1c356f2c5c8fc
 rubiconproject.com, 26958, RESELLER, 0bfd66d529a55807
