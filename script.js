@@ -13,10 +13,6 @@ const routes = {
  * @param {boolean} pushState - Indica si se debe actualizar el historial del navegador (true para navegación normal, false para botones de back/forward).
  */
 function showSection(sectionId, pushState = true) {
-  const mainContent = document.getElementById("main-content");
-  const termsContent = document.getElementById("terms-content");
-  const privacyContent = document.getElementById("privacy-content");
-
   // 1. Actualizar la URL si es necesario (solo si es una navegación directa)
   if (pushState) {
     const path = routes[sectionId] || "/";
@@ -55,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   history.replaceState(
     { section: initialSection },
     document.title,
-    window.location.pathname
+    window.location.pathname,
   );
   showSection(initialSection, false); // false para evitar añadir un nuevo historial
 });
@@ -89,3 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleButton.setAttribute("aria-expanded", !isExpanded);
   });
 });
+
+// updates current year for footer
+document.getElementById("year").textContent = new Date().getFullYear();

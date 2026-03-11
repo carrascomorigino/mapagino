@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapagino - Web Corporativa</title>
+
+    <link rel="icon" type="image/png" href="assets/icono_mapuquina.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -17,7 +19,13 @@
   <body>
     <nav class="navbar">
       <div class="navbar-brand nav-link-home">
-        <a href="index.html">Mapagino</a>
+        <a href="index.html">
+          <img
+            src="assets/logotipo.png"
+            alt="Logo de la Empresa Mapagino"
+            class="navbar-logo"
+          />
+        </a>
       </div>
 
       <button
@@ -34,62 +42,83 @@
       </div>
     </nav>
 
-    <header class="header">
-      <img
-        src="assets/logotipo.png"
-        alt="Logo de la Empresa Mapagino"
-        class="logo"
-      />
-    </header>
+    <main class="main-parallax">
+      <video class="main-bg-video" autoplay muted loop playsinline>
+        <source src="assets/animated_background.mp4" type="video/mp4" />
+      </video>
 
-    <main>
-      <div id="main-content" class="content-section">
-        <h2>Nuestro Portafolio de Aplicaciones</h2>
-        <p>
-          En Mapagino, creamos herramientas digitales intuitivas para ayudarte a
-          gestionar tus finanzas personales y profesionales.
-        </p>
+      <div class="main-overlay"></div>
 
-        <section class="app-card mapuquina-highlight">
-          <div class="app-header">
-            <img
-              src="assets/icono_mapuquina.png"
-              alt="Icono de la App Mapuquina"
-              class="app-icon"
-            />
-            <h3>Mapuquina</h3>
-          </div>
-          <div class="app-details">
-            <p>
-              <b>Mapuquina</b> es nuestra herramienta principal para la gestión
-              de finanzas personales. Te permite registrar cuentas formales e
-              informales, transacciones, y ofrece una visión clara de tu
-              economía a través de gráficos y proyecciones de ahorro. No
-              requiere vincular tu dinero real.
-            </p>
-            <ul>
-              <li>
-                <i class="fas fa-chart-line"></i> Proyecciones de Ahorro y
-                Rendimiento.
-              </li>
-              <li>
-                <i class="fas fa-hand-holding-usd"></i> Simulador de Préstamos y
-                Planes de Deuda.
-              </li>
-              <li>
-                <i class="fas fa-tags"></i> Organización de movimientos por
-                categorías.
-              </li>
-              <li>
-                <i class="fas fa-shield-alt"></i> Copia de respaldo en la nube
-                con Google Drive.
-              </li>
-            </ul>
-          </div>
-        </section>
+      <div id="main-content">
+        <div class="content-section">
+          <h2>Nuestro Portafolio de Aplicaciones</h2>
+          <p>
+            En Mapagino, creamos herramientas digitales intuitivas para ayudarte
+            a gestionar tus finanzas personales y profesionales.
+          </p>
+
+          <section class="app-card mapuquina-highlight">
+            <div class="app-header">
+              <img
+                src="assets/icono_mapuquina.png"
+                alt="Icono de la App Mapuquina"
+                class="app-icon"
+              />
+              <h3>Mapuquina</h3>
+            </div>
+            <div class="app-details">
+              <p>
+                <b>Mapuquina</b> es nuestra herramienta principal para la
+                gestión de finanzas personales. Te permite registrar cuentas
+                formales e informales, transacciones, y ofrece una visión clara
+                de tu economía a través de gráficos y proyecciones de ahorro. No
+                requiere vincular tu dinero real.
+              </p>
+              <ul>
+                <li>
+                  <i class="fas fa-chart-line"></i> Proyecciones de Ahorro y
+                  Rendimiento.
+                </li>
+                <li>
+                  <i class="fas fa-hand-holding-usd"></i> Simulador de Préstamos
+                  y Planes de Deuda.
+                </li>
+                <li>
+                  <i class="fas fa-tags"></i> Organización de movimientos por
+                  categorías.
+                </li>
+                <li>
+                  <i class="fas fa-shield-alt"></i> Copia de respaldo en la nube
+                  con Google Drive.
+                </li>
+              </ul>
+              <div class="download-buttons">
+                <a
+                  href="https://apps.apple.com/us/app/mapuquina/id6759305127"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/download_app_Store_Badge_ES_blk.png"
+                    alt="Descargar en App Store"
+                    class="store-badge badge-apple"
+                  />
+                </a>
+
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.mapagino.mapuquina"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/download_play_Store_Badge_ES_blk.png"
+                    alt="Disponible en Google Play"
+                    class="store-badge badge-google"
+                  />
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-
-      <div id="terms-content" class="content-section hidden"></div>
     </main>
 
     <footer class="footer">
@@ -109,9 +138,13 @@
           <i class="fab fa-instagram"></i>
         </a>
       </div>
-      <p>&copy; 2025 Mapagino. Todos los derechos reservados.</p>
+      <p>
+        &copy; 2025–<span id="year"></span> Mapagino. Todos los derechos
+        reservados.
+      </p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="parallax.js"></script>
   </body>
 </html>
