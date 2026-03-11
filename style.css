@@ -93,38 +93,6 @@ ol > li::marker {
   border-color: #000;
 }
 
-/* MEDIA QUERY: Escritorio/Tablets (Más de 768px) */
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none; /* Oculta el botón de menú en escritorio */
-  }
-
-  .navbar-links {
-    display: flex !important; /* Muestra siempre los enlaces en escritorio */
-    flex-direction: row;
-    width: auto;
-    position: static;
-    background-color: transparent;
-  }
-
-  .navbar-links a {
-    padding: 0 15px;
-    border-bottom: none;
-  }
-}
-
-/* MEDIA QUERY: (menos de 768px) */
-@media (max-width: 768px) {
-  .download-buttons {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .store-badge {
-    height: 68px;
-  }
-}
-
 /* 4. Contenido Principal Común */
 main {
   background-color: #f8f7db;
@@ -344,9 +312,6 @@ main {
   width: auto;
   max-width: 100%;
   transition: transform 0.2s ease;
-  &.badge-google {
-    height: 99px;
-  }
 }
 
 .badge-apple {
@@ -354,9 +319,45 @@ main {
 }
 
 .badge-google {
-  transform: scale(1.12);
+  transform: scale(1.2);
 }
 
 .store-badge:hover {
   transform: scale(1.15);
+}
+
+/* MEDIA QUERY: Escritorio/Tablets (Más de 768px) */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Oculta el botón de menú en escritorio */
+  }
+
+  .navbar-links {
+    display: flex !important; /* Muestra siempre los enlaces en escritorio */
+    flex-direction: row;
+    width: auto;
+    position: static;
+    background-color: transparent;
+  }
+
+  .navbar-links a {
+    padding: 0 15px;
+    border-bottom: none;
+  }
+}
+
+/* MEDIA QUERY: (menos de 768px) */
+@media (max-width: 768px) {
+  .download-buttons {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .store-badge {
+    height: 68px;
+  }
+
+  .badge-google {
+    transform: scale(1.12);
+  }
 }
